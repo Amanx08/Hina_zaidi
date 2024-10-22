@@ -2626,8 +2626,9 @@ button[class*=-dark]:hover {
 }
 
 .pricing_toggle_tab:hover {
-  background-color: #EF9468;
+  background-color: #fdf4ef;
   border-radius: 5px;
+  color: black!important;
 
   /* Optional: Hover color */
 }
