@@ -2,21 +2,25 @@ import useParseSliceData from '@/hooks/useslice';
 import { faArrowRight, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-const Banner = ({data}) => {
+const Banner = ({ data }) => {
 
-    const {heading , subheading , btn_title , card , img , videolink} = data;
-   const counter = useParseSliceData(card);
+    const { heading, subheading, btn_title, card, img, videolink, status } = data;
+    const counter = useParseSliceData(card);
+    console.log(status)
     return (
+
+        // { status === true &&
+
         <section className="hero_section decoration_wrapper">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6">
                         <div className="hero_content_wrap">
                             <h1 className="heading_text">
-                               {heading}
+                                {heading}
                             </h1>
                             <p className="heading_description">
-                               {subheading}
+                                {subheading}
                             </p>
                             <ul className="btns_group unordered_list">
                                 <li>
@@ -25,7 +29,7 @@ const Banner = ({data}) => {
                                             Get A Consultation
                                         </span>
                                         <span className="btn_icon">
-                                        <FontAwesomeIcon icon={faSquareArrowUpRight} />
+                                            <FontAwesomeIcon icon={faSquareArrowUpRight} />
 
 
                                         </span>
@@ -43,30 +47,30 @@ const Banner = ({data}) => {
                                 </li>
                             </ul>
                             <ul className="hero_section_counter unordered_list">
-                                {counter && counter.map((item , index)=>{
-                                    const {title , value, count} = item;
-                                    return(
+                                {counter && counter.map((item, index) => {
+                                    const { title, value, count } = item;
+                                    return (
                                         <li key={index}>
-                                        <div className="counter_item">
-                                            <div className="counter_value mb-0">
-                                                <span className="odometer" data-count={value}>0</span>
-                                                <span>{count}</span>
+                                            <div className="counter_item">
+                                                <div className="counter_value mb-0">
+                                                    <span className="odometer" data-count={value}>0</span>
+                                                    <span>{count}</span>
+                                                </div>
+                                                <hr />
+                                                <p className="counter_description mb-0">
+                                                    {title}
+                                                </p>
                                             </div>
-                                            <hr />
-                                            <p className="counter_description mb-0">
-                                                {title}
-                                            </p>
-                                        </div>
-                                    </li>  
+                                        </li>
                                     )
                                 })}
-                                
+
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-6">
                         <div className="hero_image_wrap">
-                            <img src={img ||"/images/hero/hero_image_1-min.jpg"} alt="Talking Minds – Psychotherapist Site Template" />
+                            <img src={img || "/images/hero/hero_image_1-min.jpg"} alt="Talking Minds – Psychotherapist Site Template" />
                         </div>
                     </div>
                 </div>
@@ -76,6 +80,9 @@ const Banner = ({data}) => {
                 <img src="/images/background 3.png" alt="Shape Leaf - Talking Minds - Psychotherapist Site Template" />
             </div>
         </section>
+        
+        // }
+
 
     )
 }

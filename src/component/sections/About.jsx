@@ -4,7 +4,7 @@ import useParseSliceData from '@/hooks/useslice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareArrowUpRight , faPlay , faCheck , faSortUp } from '@fortawesome/free-solid-svg-icons';
 const About = ({ data }) => {
-    const { heading, subheading, btn_title, card, img, videolink } = data;
+    const { heading, subheading, btn_title, card, img, videolink,subtitle } = data;
     const cardData = useParseSliceData(card);
     return (
         <section className="about_section section_space_lg">
@@ -25,7 +25,7 @@ const About = ({ data }) => {
                         <div className="about_content">
                             <div className="section_heading mb-4">
                                 <h2 className="section_heading_text">
-                                    <mark>Dr. Merry Stone</mark> {heading}
+                                    <mark>{subtitle}</mark> {heading}
                                 </h2>
                                 <p className="section_heading_description mb-0 ">
                                     {subheading}

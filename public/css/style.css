@@ -2608,6 +2608,7 @@ button[class*=-dark]:hover {
 
 
 
+
 /* additional  */
 
 .pricing_toggle_tab {
@@ -2625,8 +2626,9 @@ button[class*=-dark]:hover {
 }
 
 .pricing_toggle_tab:hover {
-  background-color: #EF9468;
+  background-color: #fdf4ef;
   border-radius: 5px;
+  color: black!important;
 
   /* Optional: Hover color */
 }
@@ -2751,9 +2753,9 @@ button[class*=-dark]:hover {
   color: var(--bs-body-color);
 }
 
-.pricing_item .pricing_annually {
+/* .pricing_item .pricing_annually {
   display: none;
-}
+} */
 
 .pricing_item hr {
   height: 2px;

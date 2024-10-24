@@ -115,9 +115,11 @@
 			color: var(--bs-body-color);
 		}
 	}
-	.pricing_annually {
-		display: none;
-	}
+	
+	// .pricing_annually {
+	// 	display: none;
+	// }
+
 	hr {
 		height: 2px;
 		width: 60px;
@@ -153,13 +155,14 @@
 		}
 	}
 }
-.pricing_item.active {
-	.pricing_annually {
-		display: block;
-	}
-	.pricing_monthly {
-		display: none;
-	}
-}
+
+// .pricing_item.active {
+// 	.pricing_annually {
+// 		display: block;
+// 	}
+// 	.pricing_monthly {
+// 		display: none;
+// 	}
+// }
 /* 4.04 - Pricing - End
 ================================================== */
